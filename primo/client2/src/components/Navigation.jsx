@@ -11,7 +11,7 @@ const Navigation = (props) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowInitialModal(true);
-    }, 1000); // 1000 -> 1 secondo 600000
+    }, 220000); // 1000 -> 1 secondo 600000
 
     return () => clearTimeout(timer); // Pulisco il timer quando il componente si smonta
   }, []);
@@ -57,7 +57,7 @@ const Navigation = (props) => {
           <Modal.Title>Congratulations!</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p>You have unlocked the achievement:</p>
+          <p>You have unlocked the Milestone:</p>
           <p><b>"Reduced stress levels"</b></p>
           <p>You can share it in the community by going in the Milestones section!</p>
         </Modal.Body>

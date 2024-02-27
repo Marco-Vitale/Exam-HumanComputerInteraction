@@ -262,12 +262,12 @@ const FakeChat = (props) => {
     };
   
     const timers = [
-      setTimeout(() => sendMessage('Luigi24', "Congratulations David, keep it up!"), 10000),
-      setTimeout(() => sendMessage('Sarah88', "You're doing great, David! Keep pushing forward!"), 20000),
-      setTimeout(() => sendMessage('JohnDoe', "Stay strong, David! You've got this!"), 30000),
-      setTimeout(() => sendMessage('AliceSmith', "Believe in yourself, David. You're making progress!"), 40000),
-      setTimeout(() => sendMessage('Michael123', "One step at a time, David. You're on the right path!"), 50000),
-      setTimeout(() => sendMessage('EmilyGreen', "Keep going, David! You're stronger than you think!"), 60000)
+      setTimeout(() => sendMessage('Luigi24', "Congratulations David, keep it up!"), 250000),
+      setTimeout(() => sendMessage('Sarah88', "You're doing great, David! Keep pushing forward!"), 260000),
+      setTimeout(() => sendMessage('JohnDoe', "Stay strong, David! You've got this!"), 270000),
+      setTimeout(() => sendMessage('AliceSmith', "Believe in yourself, David. You're making progress!"), 280000),
+      setTimeout(() => sendMessage('Michael123', "One step at a time, David. You're on the right path!"), 290000),
+      setTimeout(() => sendMessage('EmilyGreen', "Keep going, David! You're stronger than you think!"), 300000)
     ];
     
   return () => {

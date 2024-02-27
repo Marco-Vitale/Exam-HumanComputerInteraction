@@ -273,7 +273,7 @@ function Homelayout(props) {
     <h3>Your day so far:</h3>
     </Col>
     <Col>
-    <Toast show={showToast} onClose={toggleToast} delay={3000} autohide bg={statoToast === 2 ? "danger" :"success"}>
+    <Toast show={showToast} onClose={toggleToast} delay={3000} autohide bg="success">
       <Toast.Body>
       {statoToast === 0 ? "Report modified successfully!" : statoToast === 1 ? "Report saved successfully!" : "Report deleted successfully"}      </Toast.Body>
     </Toast>

@@ -102,7 +102,7 @@ const Calendar = () => {
           </Row>
           <Row>
             <Col>
-              <strong> {report.Smoked ? 'you were tempted to smoke' : 'you were not tempted to smoke'}</strong>
+              <strong> {report.Smoked ? 'You were tempted to smoke' : 'You were not tempted to smoke'}</strong>
             </Col>
           </Row>
           <Row>
@@ -157,12 +157,12 @@ const Calendar = () => {
             </Button>
             
             )}
-            {(date.getDate() === 5 && date.getMonth() === 1 && date.getFullYear() === 2024) || (date.getDate() === 12 && date.getMonth() === 1 && date.getFullYear() === 2024) ? (
+            {(date.getDate() === 24 && date.getMonth() === 1 && date.getFullYear() === 2024) || (date.getDate() === 25 && date.getMonth() === 1 && date.getFullYear() === 2024 || date.getDate() === 27 && date.getMonth() === 1 && date.getFullYear() === 2024) ? (
               <span role="img" aria-label="trophy" style={{ marginLeft: '30px', fontSize: '1.5em' }}>🏆</span>
             ) : null}
 
-            {(date.getDate() === 5 && date.getMonth() === 1 && date.getFullYear() === 2024) || (date.getDate() === 6 && date.getMonth() === 1 && date.getFullYear() === 2024) || 
-             (date.getDate() === 9 && date.getMonth() === 1 && date.getFullYear() === 2024) || (date.getDate() === 12 && date.getMonth() === 1 && date.getFullYear() === 2024)
+            {(date.getDate() === 23 && date.getMonth() === 1 && date.getFullYear() === 2024) || (date.getDate() === 24 && date.getMonth() === 1 && date.getFullYear() === 2024) || 
+             (date.getDate() === 25 && date.getMonth() === 1 && date.getFullYear() === 2024) || (date.getDate() === 27 && date.getMonth() === 1 && date.getFullYear() === 2024)
             ? (
               <span role="img" aria-label="book" style={{ marginLeft: '15px', fontSize: '1.5em' }}>📖</span>
             ) : null}
@@ -243,28 +243,37 @@ const Calendar = () => {
         <Modal.Title>{selectedDate.toDateString()}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        {(selectedDate.getDate() === 5 && selectedDate.getMonth() === 1 && selectedDate.getFullYear() === 2024) ? (
+        {(selectedDate.getDate() === 23 && selectedDate.getMonth() === 1 && selectedDate.getFullYear() === 2024) ? (
+          <>
+          <ReportsList reportn={1}></ReportsList>
+          </>
+        ) : (selectedDate.getDate() === 24 && selectedDate.getMonth() === 1 && selectedDate.getFullYear() === 2024) ? (
           <>
           <p>Congratulations! <br></br> <br></br>
           In this date you unlocked the milestone: 
           <br></br></p>
           <p><b>🏆 20 cigarettes not smoked 🏆</b></p>
           <p>You can go in the Milestones section if you want to share it!</p>
-          <ReportsList reportn={1}></ReportsList>
+          <ReportsList reportn={2}></ReportsList>
           </>
-        ) : (selectedDate.getDate() === 12 && selectedDate.getMonth() === 1 && selectedDate.getFullYear() === 2024) ? (
+        ) : (selectedDate.getDate() === 25 && selectedDate.getMonth() === 1 && selectedDate.getFullYear() === 2024) ? (
           <>
           <p>Congratulations! <br></br> <br></br>
           In this date you unlocked the milestone: 
           <br></br></p>
-          <p><b>🏆 Coughing and shortness of breath decrease 🏆</b></p>
+          <p><b>🏆 10 euro saved 🏆</b></p>
           <p>You can go in the Milestones section if you want to share it!</p>
-          <ReportsList reportn={2}></ReportsList>
-          </>
-        ) : (selectedDate.getDate() === 6 && selectedDate.getMonth() === 1 && selectedDate.getFullYear() === 2024) ? (
           <ReportsList reportn={3}></ReportsList>
-        ) : (selectedDate.getDate() === 9 && selectedDate.getMonth() === 1 && selectedDate.getFullYear() === 2024) ? (
+          </>
+        ) : (selectedDate.getDate() === 27 && selectedDate.getMonth() === 1 && selectedDate.getFullYear() === 2024) ? (
+          <>
+          <p>Congratulations! <br></br> <br></br>
+          In this date you unlocked the milestone: 
+          <br></br></p>
+          <p><b>🏆 Shortness of breath decrease 🏆</b></p>
+          <p>You can go in the Milestones section if you want to share it!</p>
           <ReportsList reportn={1}></ReportsList>
+          </>
         ) : (
           <p>No milestone or report for this date.</p>
         )}
